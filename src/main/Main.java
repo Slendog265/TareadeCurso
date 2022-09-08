@@ -1,11 +1,21 @@
 package main;
 
-public class Main {
+import dol.hourEmployee;
+import ui.addHourEmp;
 
+public class Main {
+	private String FirstName;
+	hourEmployee m = new hourEmployee(FirstName, null, null, null, null, null, null, null);
 	public static void main(String[] args) {
 
-		System.out.println("Aqui comineza todo, ahora solo tenemos que idear las bases de nuestra tarea.");
+		addHourEmp p = new addHourEmp();
+		p.HEmployee();
+		
 		
 	}
 
+	
+	public void prueba() {
+		System.out.println(m.getFirstName());
+	}
 }
