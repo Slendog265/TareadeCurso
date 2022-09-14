@@ -5,7 +5,9 @@ import ui.addHourEmp;
 
 public class Main {
 	private String FirstName;
-	hourEmployee m = new hourEmployee(FirstName, null, null, null, null, null, null, null);
+
+
+	hourEmployee m = new hourEmployee();
 	public static void main(String[] args) {
 
 		addHourEmp p = new addHourEmp();

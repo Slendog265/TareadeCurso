@@ -7,9 +7,15 @@ public class hourEmployee extends Person {
 	private Integer Tar;
 	private Integer xtraTar;
 	
+	
+	
+	public hourEmployee() {
+		
+	}
+
 	public hourEmployee(String firstName, String secondName, String fisrtLname, String secondLname, Integer hour,
 			Integer xtraHours, Integer tar, Integer xtraTar) {
-		super(firstName, secondName, fisrtLname, secondLname);
+		super(firstName, secondName, fisrtLname, secondLname, xtraTar);
 		Hour = hour;
 		this.xtraHours = xtraHours;
 		Tar = tar;

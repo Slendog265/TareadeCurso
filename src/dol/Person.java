@@ -6,13 +6,19 @@ public class Person {
 	private String secondName;
 	private String fisrtLname;
 	private String secondLname;
+	private Integer Id;
 
-	public Person(String firstName, String secondName, String fisrtLname, String secondLname) {
+	public Person() {
+		super();
+	}
+
+	public Person(String firstName, String secondName, String fisrtLname, String secondLname, Integer id) {
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.fisrtLname = fisrtLname;
 		this.secondLname = secondLname;
+		this.Id = id;
 	}
 
 	public String getFirstName() {
@@ -45,6 +51,14 @@ public class Person {
 
 	public void setSecondLname(String secondLname) {
 		this.secondLname = secondLname;
+	}
+
+	public Integer getId() {
+		return Id;
+	}
+
+	public void setId(Integer id) {
+		Id = id;
 	}
 
 }

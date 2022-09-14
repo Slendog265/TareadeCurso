@@ -12,7 +12,7 @@ public class addHourEmp {
 	
 	public hourEmployee HEmployee() {
 		
-		hourEmployee m = new hourEmployee(null, null, null, null, null, null, null, null);
+		hourEmployee m = new hourEmployee();
 		Short op;
 		System.out.println("Primer Nombre del Empleado");
 		m.setFirstName(entry.next());
@@ -22,8 +22,19 @@ public class addHourEmp {
 		m.setFisrtLname(entry.next());
 		System.out.println("Segundo Apellido del Empleado");
 		m.setFisrtLname(entry.next());
-		System.out.println("Horas de Trabajo del Empleado");
-		m.setHour(entry.nextInt());
+		boolean pu = true;
+		do {
+			
+			try {
+				System.out.println("Horas de Trabajo del Empleado");
+				m.setHour(entry.nextInt());
+				
+			} catch (Exception e ) {
+				pu = false;
+				System.out.println("Digito equivocado solo en numero" + e);
+			}		
+		}while (pu);
+		
 		System.out.println("Tarifa del Empelado por Hora");
 		m.setTar(entry.nextInt());
 		System.out.println("El empleado Trabaja Horas Extras?");

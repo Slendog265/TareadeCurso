@@ -6,11 +6,13 @@ public class monthEmployee extends Person {
 	private Double minimumWage;
 	private Double netSalary;
 	
+	public monthEmployee ( ) {
 	
+	}
 
 	public monthEmployee(String firstName, String secondName, String fisrtLname, String secondLname,
-			String eemployeNumb, Double minimumWage, Double netSalary) {
-		super(firstName, secondName, fisrtLname, secondLname);
+			String eemployeNumb, Double minimumWage, Double netSalary, Integer Id) {
+		super(firstName, secondName, fisrtLname, secondLname, Id);
 		this.eemployeNumb = eemployeNumb;
 		this.minimumWage = minimumWage;
 		this.netSalary = netSalary;
