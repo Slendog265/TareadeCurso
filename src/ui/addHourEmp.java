@@ -8,7 +8,11 @@ import main.Main;
 public class addHourEmp {
 	private Scanner entry = new Scanner(System.in);
 	Main q = new Main ();
+	Menu a = new Menu ();
 	
+	public addHourEmp() {
+		
+	}
 	
 	public hourEmployee HEmployee() {
 		
@@ -22,25 +26,17 @@ public class addHourEmp {
 		m.setFisrtLname(entry.next());
 		System.out.println("Segundo Apellido del Empleado");
 		m.setFisrtLname(entry.next());
-		boolean pu = true;
-		do {
-			
-			try {
+	
 				System.out.println("Horas de Trabajo del Empleado");
 				m.setHour(entry.nextInt());
 				
-			} catch (Exception e ) {
-				pu = false;
-				System.out.println("Digito equivocado solo en numero" + e);
-			}		
-		}while (pu);
-		
 		System.out.println("Tarifa del Empelado por Hora");
 		m.setTar(entry.nextInt());
 		System.out.println("El empleado Trabaja Horas Extras?");
 		System.out.println("1. Si");
 		System.out.println("2. No");
 		op = entry.nextShort();		
+		
 		switch (op) {
 		
 		case 1:
@@ -51,8 +47,7 @@ public class addHourEmp {
 			break;
 			
 		case 2:
-			System.out.println("Aqui va el menu");
-			q.prueba();
+			again();
 			break;
 			
 		default:
@@ -61,8 +56,12 @@ public class addHourEmp {
 		
 		}
 		
+		
 		return m;
 		
 	}
 
+	public void again() {
+		a.show();
+	}
 }

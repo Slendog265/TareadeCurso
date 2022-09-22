@@ -1,23 +1,24 @@
 package main;
 
+import java.util.Scanner;
+
+import bll.Data;
 import dol.hourEmployee;
+import ui.Menu;
 import ui.addHourEmp;
 
-public class Main {
+public class Main  {
 	private String FirstName;
 
 
-	hourEmployee m = new hourEmployee();
-	public static void main(String[] args) {
-
-		addHourEmp p = new addHourEmp();
-		p.HEmployee();
-		
-		
-	}
-
+	static Menu m = new Menu();
 	
-	public void prueba() {
-		System.out.println(m.getFirstName());
+	static Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) {
+		m.show();
+		
 	}
+	
+	
+	
 }

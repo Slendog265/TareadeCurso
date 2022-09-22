@@ -54,7 +54,10 @@ public class hourEmployee extends Person {
 		this.xtraTar = xtraTar;
 	}
 	
-	
+	public void showData() {
+		System.out.printf("\n%s", 
+				getFirstName());
+	}
 	
 
 }
