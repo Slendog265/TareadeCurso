@@ -1,5 +1,6 @@
 package ui;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import bll.Data;
@@ -7,36 +8,52 @@ import bll.Data;
 public class Menu implements IMenu{
 	Scanner scan = new Scanner(System.in);
 	
+	
 	public void ShowOp() {
-		System.out.println("1.Agregar");
-		System.out.println("2.Mostrar");
-		System.out.println("3.Salir");
-		
+		System.out.println("1.Agregar Empleado por Hora \n2.Mostrar Empleado por Hora \n3.Volver");
 		
 	}
 	public void show() {
-		short op = 0;
-	do {
-		
-	ShowOp();
-	op = scan.nextShort();
-	switch(op) {
+		PMenu z = new PMenu();
+		short op1 = 0;
 	
-	case 1:
-		Data.catchHEmployee();
-		break;
-		
-	case 2:
-		Data.showDataHEmployee();
-		break;
-		
-	case 3:
-		System.exit(0);
-		
-		default:
-			System.out.println("Seleccion Equivocada");
-			break;
+		ShowOp();
+	    boolean error = false;
+		do {
+		try {
+			op1 = scan.nextShort();
+			
+	switch(op1) {
+			
+			case 1:
+				Data.catchHEmployee();
+				break;
+				
+			case 2:
+				Data.showDataHEmployee();
+				break;
+			
+			case 3:
+				z.options2();
+				break;
+				
+				default:
+					System.out.println("Opcion Incorrecta \nPor favor,digite una opcion correcta");
+					System.out.println();
+				break;
 	}
-	}while(op != 3);
+		}catch(InputMismatchException e) {
+			
+			System.out.println("Introduce un valor numerico.");
+			error = true;
+			if(error = true) {
+				
+				break;
+			}
+		}
+		}while(op1 != 3 );
 	}
+	
+	
+	
 }

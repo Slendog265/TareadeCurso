@@ -3,6 +3,7 @@ package bll;
 import dol.Pp;
 import dol.hourEmployee;
 import dol.monthEmployee;
+import ui.addEmployee;
 import ui.addHourEmp;
 
 public final class Data {
@@ -18,14 +19,19 @@ public final class Data {
 	}
 	
 	public static void addMoEmp(monthEmployee f) {
-		
+		G.addMEmp(f);
 	}
 	
 	public static void catchMEmployee() {
-		
+		addEmployee me = new addEmployee();
+		addMoEmp(me.MEmployee());
 	}
 	
 	public static void showDataHEmployee() {
 		G.showData();
+	}
+	
+	public static void ShowDataMEmp() {
+		G.showData2();
 	}
 }

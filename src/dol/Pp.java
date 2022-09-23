@@ -3,14 +3,20 @@ package dol;
 import java.util.ArrayList;
 import java.util.List;
 
+import ui.Menu;
+import ui.MenuMEmp;
+
 public class Pp {
 
 	private List<hourEmployee> HEmp;
 	private List<monthEmployee> MEmp;
+	Menu q = new Menu();
+	MenuMEmp w = new MenuMEmp();
 	
 	public Pp() {
 		HEmp = new ArrayList<hourEmployee>();
 		MEmp = new ArrayList<monthEmployee>();
+		
 	}
 	public Pp(List<hourEmployee> hEmp, List<monthEmployee> mEmp) {
 		super();
@@ -43,6 +49,23 @@ public class Pp {
 			HEmp.get(i).showData();
 	    System.out.println("----------------------------------------");
 	    System.out.println();
+	    q.show();
+	    
 		}
 	}
+	
+	public void showData2() {
+		
+		System.out.println("----------------------------------------");
+		System.out.println("Listado de Empleados");
+		System.out.println("----------------------------------------");
+		for(int i=0; i<MEmp.size();i++) {
+			MEmp.get(i).showData2();
+	    System.out.println("----------------------------------------");
+	    System.out.println();
+	    w.show2();
+	    
+		}
+	}
+	
 }
