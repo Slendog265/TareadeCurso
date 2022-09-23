@@ -54,9 +54,19 @@ public class hourEmployee extends Person {
 		this.xtraTar = xtraTar;
 	}
 	
-	public void showData() {
-		System.out.printf("\n%s", 
-				getFirstName());
+	public void showData () {
+		System.out.printf("\n#%s %s %s %s %s\n ", 
+				getId(),
+				getFirstName(),
+				getSecondName(),
+				getFisrtLname(),
+				getSecondLname()
+				);
+		System.out.printf("\n Horas de Trabajo = %s \nHoras de Trabajo Extras = %s \nTarifa = %s \nTarifa Extras = %s\n" ,
+				getHour(),
+				getTar(),
+				getXtraHours(),
+				getXtraTar());
 	}
 	
 

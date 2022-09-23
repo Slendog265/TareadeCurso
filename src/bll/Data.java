@@ -25,7 +25,7 @@ public final class Data {
 		
 	}
 	
-	public static void showData() {
+	public static void showDataHEmployee() {
 		G.showData();
 	}
 }

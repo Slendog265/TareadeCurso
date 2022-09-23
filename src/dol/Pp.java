@@ -7,6 +7,7 @@ public class Pp {
 
 	private List<hourEmployee> HEmp;
 	private List<monthEmployee> MEmp;
+	
 	public Pp() {
 		HEmp = new ArrayList<hourEmployee>();
 		MEmp = new ArrayList<monthEmployee>();
@@ -35,8 +36,13 @@ public class Pp {
 		this.MEmp.add(f);
 	}
 	public void showData() {
+		System.out.println("----------------------------------------");
+		System.out.println("Listado de Empleados");
+		System.out.println("----------------------------------------");
 		for(int i=0; i<HEmp.size();i++) {
 			HEmp.get(i).showData();
+	    System.out.println("----------------------------------------");
+	    System.out.println();
 		}
 	}
 }
