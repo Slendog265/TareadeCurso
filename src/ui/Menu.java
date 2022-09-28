@@ -17,9 +17,10 @@ public class Menu implements IMenu{
 		PMenu z = new PMenu();
 		short op1 = 0;
 	
-		ShowOp();
+		
 	    boolean error = false;
 		do {
+			ShowOp();
 		try {
 			op1 = scan.nextShort();
 			

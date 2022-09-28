@@ -6,13 +6,13 @@ public class Person {
 	private String secondName;
 	private String fisrtLname;
 	private String secondLname;
-	private Integer Id;
+	private String Id;
 
 	public Person() {
 		super();
 	}
 
-	public Person(String firstName, String secondName, String fisrtLname, String secondLname, Integer id) {
+	public Person(String firstName, String secondName, String fisrtLname, String secondLname, String id) {
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
@@ -53,11 +53,11 @@ public class Person {
 		this.secondLname = secondLname;
 	}
 
-	public Integer getId() {
+	public String getId() {
 		return Id;
 	}
 
-	public void setId(Integer id) {
+	public void setId(String id) {
 		Id = id;
 	}
 

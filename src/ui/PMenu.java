@@ -3,16 +3,17 @@ package ui;
 import java.util.Scanner;
 public class PMenu {
 	
-	
+//"\u001B[0m";
 		Scanner menu = new Scanner(System.in);
 				
 		Menu w = new Menu();
 		MenuMEmp e = new MenuMEmp();
 		
 		public void options () {
-		System.out.println("Plantilla de Pago \n1. Empleado mensual \n2. Empleado por hora \n3. Salir \nPor favor, digite un numero: ");
-				
-	}
+			System.out.println();
+			System.out.println("\033[37m===========================\u001B[0m\033[33m\nPlantilla de Pago\n\033[37m===========================\u001B[0m \n \n1. Empleado mensual\n2. Empleado por hora\n3. Salir\n\n* Por favor, digite un numero:");	
+	
+		}
 		
 		public void options2 () {
 			short opc;

@@ -13,13 +13,14 @@ public class addHourEmp {
 	public addHourEmp() {
 		
 	}
+	hourEmployee m = new hourEmployee();
 	
 	public hourEmployee HEmployee() {
 		
-		hourEmployee m = new hourEmployee();
+		
 		Short op;
 		System.out.println("ID del Empleado");
-		m.setId(entry.nextInt());
+		m.setId(entry.next());
 		System.out.println("Primer Nombre del Empleado");
 		m.setFirstName(entry.next());
 		System.out.println("Segundo Nombre del Empleado");
@@ -42,10 +43,13 @@ public class addHourEmp {
 			m.setXtraHours(entry.nextInt());
 			System.out.println("Tarifa Extra del Empleado");
 			m.setXtraTar(entry.nextInt());
-			break;
+			Cal3();
+			return m;
 		case 2:
+			Cal2();
 			m.setXtraHours(0);
 			m.setXtraTar(0);
+			
 			return m;
 		default:
 				System.out.println("Eleccion equivocada");
@@ -54,8 +58,34 @@ public class addHourEmp {
 		return m;
 	}
 	
-	public void showBook() {
-		System.out.printf("");
+	public hourEmployee Cal2() {
+		Integer Tarifa = m.getTar();
+		Integer Horas = m.getHour();
+		Integer Total1 = Horas * Tarifa;
+		m.setBruteWage(Total1);	
+		Double Dedud = Total1 * 0.05;
+		Double netSalary = Total1 - Dedud;
+		m.setNetSalary(netSalary);
+		return m;		
 		
 	}
+	
+	
+	public hourEmployee Cal3() {
+		Integer Tarifa = m.getTar();
+		Integer Horas = m.getHour();
+		Integer Total1 = Horas * Tarifa;
+		Integer Xtarifa = m.getXtraTar();
+		Integer XHora = m.getXtraHours();
+		Integer Total2 = XHora * Xtarifa;
+		Integer Brute = Total1 + Total2;
+		m.setBruteWage(Brute);
+		double Dedud = Brute * 0.05;
+		double netSalary = Brute - Dedud;
+		m.setNetSalary(netSalary);
+		
+		return m;
+		
+	}
+	
 }
