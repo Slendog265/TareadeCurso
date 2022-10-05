@@ -45,6 +45,7 @@ public class Pp {
 		System.out.println("________________________________________");
 		System.out.println("|Listado de Empleados|");
 		System.out.println("________________________________________");
+		System.out.println("|Id   |      Nombres      |y Apellidos | Horas | Tarifa | HorasExtra | Tarifa Extra | Salario Bruto | Salario Neto |");
 		for(int i=0; i<HEmp.size();i++) {
 			HEmp.get(i).showData();
 	    System.out.println("\n----------------------------------------");
@@ -63,7 +64,7 @@ public class Pp {
 			MEmp.get(i).showData2();
 	    System.out.println();
 	    System.out.println("----------------------------------------");
-	    System.out.println();
+	    //System.out.println();
 	  
 	    
 		}

@@ -34,8 +34,8 @@ public class addHourEmp {
 	   System.out.println("Tarifa del Empelado por Hora");
 		m.setTar(entry.nextInt());
 		System.out.println("El empleado Trabaja Horas Extras?");
-		System.out.println("1. Si");
-		System.out.println("2. No");
+		System.out.println("1.Si");
+		System.out.println("2.No");
 		op = entry.nextShort();		
 		switch (op) {
 		case 1:

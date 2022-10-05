@@ -82,12 +82,12 @@ public class hourEmployee extends Person {
 
 	public void showData () {
 	
-		
+		//System.out.println("|     |"+"      Nombres      |"+"y Apellidos | Horas | Tarifa | HorasExtra | Tarifa Extra | Salario Bruto | Salario Neto |");
 		System.out.println("----------------------------------------");
 		System.out.printf("|#"+ getId() + "|"+ getFirstName() + " "+ getSecondName() 
-		+ " "+ getFisrtLname() + " "+ getSecondLname() +"|"+ getHour()+"|"+ getTar()+"|"+ getXtraHours()
-		+"|"+ getXtraTar()+"|"+ getBruteWage()+"|"+ getNetSalary()+"|");
-
+		+ "|"+ getFisrtLname() + " "+ getSecondLname() +"|\033[32m"+ getHour()+"\u001B[0m|\033[32m"+ getTar()+"\u001B[0m|\033[32m"+ getXtraHours()
+		+"\u001B[0m|\033[32m"+ getXtraTar()+"\u001B[0m|\033[32m"+ getBruteWage()+"\u001B[0m|\033[32m"+ getNetSalary()+"\u001B[0m|");
+//System.out.printf("|#%s|", getId());
 		
 	}
 	

@@ -1,9 +1,10 @@
-package ui;
+ package ui;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import bll.Data;
+import main.Main;
 
 public class Menu implements IMenu{
 	Scanner scan = new Scanner(System.in);
@@ -41,15 +42,16 @@ public class Menu implements IMenu{
 				default:
 					System.out.println("Opcion Incorrecta \nPor favor,digite una opcion correcta");
 					System.out.println();
-				break;
+				
 	}
 		}catch(InputMismatchException e) {
 			
-			System.out.println("Introduce un valor numerico.");
+			System.out.println("\033[31mIntroduce un valor numerico.\u001B[0m");
+			System.out.println();
 			error = true;
 			if(error = true) {
+				show();
 				
-				break;
 			}
 		}
 		}while(op1 != 3 );

@@ -42,7 +42,7 @@ public class monthEmployee extends Person {
 				getFisrtLname(),
 				getSecondLname()
 				);
-		System.out.printf("\nSalario Minimo = %s \nSalario Neto = %s " ,
+		System.out.printf("\nSalario Minimo = \033[33m%s\u001B[0m \nSalario Neto = \033[32m%s \u001B[0m " ,
 				getMinimumWage(),
 				getNetSalary()
 				);

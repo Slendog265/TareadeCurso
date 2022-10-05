@@ -1,5 +1,6 @@
 package main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import bll.Data;
@@ -16,10 +17,20 @@ public class Main  {
 	
 	static Scanner scan = new Scanner(System.in);
 	public static void main(String[] args) {
+		boolean error = false;
+	
+		try {
 		m.options2();
-		
+		}catch(InputMismatchException e) {
+			System.out.println("\033[31mIntroduce un valor numerico.\u001B[0m");
+			System.out.println();
+			error = true;
+			if(error = true) {
+				
+		}
 	}
 	
 	
+	}
 	
 }

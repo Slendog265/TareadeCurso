@@ -1,5 +1,6 @@
 package ui;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import bll.Data;
@@ -17,11 +18,11 @@ public class MenuMEmp {
 	
 public void show2() {
 	PMenu z = new PMenu();
-		
-		
 		short op2 = 0;
+		boolean error = false;
 	do {
 		ShowOp2();
+		try {
 	op2 = scan.nextShort();
 	switch(op2) {
 	
@@ -42,6 +43,15 @@ public void show2() {
 			
 		
 	}
+		}catch(InputMismatchException  e){
+			
+			System.out.println("\033[31mIntroduce un valor numerico.\u001B[0m");
+			System.out.println();
+			error = true;
+			if(error = true) {
+				show2();
+			}
+		}
 	}while(op2 != 3);
 	
 	}
