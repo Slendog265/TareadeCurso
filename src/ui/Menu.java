@@ -11,8 +11,9 @@ public class Menu implements IMenu{
 	
 	
 	public void ShowOp() {
+	    System.out.println("===========================================");
 		System.out.println("1.Agregar Empleado por Hora \n2.Mostrar Empleado por Hora \n3.Volver");
-		
+		System.out.println("===========================================");
 	}
 	public void show() {
 		PMenu z = new PMenu();
@@ -22,7 +23,7 @@ public class Menu implements IMenu{
 	    boolean error = false;
 		do {
 			ShowOp();
-		try {
+		//try {
 			op1 = scan.nextShort();
 			
 	switch(op1) {
@@ -40,11 +41,11 @@ public class Menu implements IMenu{
 				break;
 				
 				default:
-					System.out.println("Opcion Incorrecta \nPor favor,digite una opcion correcta");
+					System.out.println("\033[31m\n=========================================== \n|             Opcion Incorrecta.            | \n|            Por favor, digite una de las tres opciones.             \n===========================================\u001B[0m");
 					System.out.println();
 				
 	}
-		}catch(InputMismatchException e) {
+		/**}catch(InputMismatchException e) {
 			
 			System.out.println("\033[31mIntroduce un valor numerico.\u001B[0m");
 			System.out.println();
@@ -53,7 +54,7 @@ public class Menu implements IMenu{
 				show();
 				
 			}
-		}
+		}**/
 		}while(op1 != 3 );
 	}
 	
