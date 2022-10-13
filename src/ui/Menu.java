@@ -1,19 +1,18 @@
  package ui;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 import bll.Data;
 import main.Main;
 
-public class Menu implements IMenu{
+public class Menu {
 	Scanner scan = new Scanner(System.in);
 	
 	
 	public void ShowOp() {
-	    System.out.println("===========================================");
-		System.out.println("1.Agregar Empleado por Hora \n2.Mostrar Empleado por Hora \n3.Volver");
-		System.out.println("===========================================");
+	    System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|\033[36m1.\u001B[0mAgregar Empleado por Hora                      |\n|\033[36m2.\u001B[0mMostrar Empleado por Hora                      |\n|\033[36m3.\u001B[0mSalir                                          |");
+		System.out.println("\033[35m===================================================\u001B[0m");
 	}
 	public void show() {
 		PMenu z = new PMenu();
