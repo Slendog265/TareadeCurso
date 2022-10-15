@@ -40,7 +40,7 @@ public class Menu {
 				break;
 				
 				default:
-					System.out.println("\033[31m\n=========================================== \n|             Opcion Incorrecta.            | \n|            Por favor, digite una de las tres opciones.             \n===========================================\u001B[0m");
+					System.out.println("\033[35m===================================================\u001B[0m\n|\033[31mNumero Equivocado                                \u001B[0m|\n|\033[31mPor favor digite una de las tres opciones.       \u001B[0m|\033[35m \n===================================================\u001B[0m");
 					System.out.println();
 				
 	}

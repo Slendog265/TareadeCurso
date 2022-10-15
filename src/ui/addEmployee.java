@@ -12,32 +12,22 @@ public class addEmployee {
 	private double g;
 	//private boolean done = false;
 	public monthEmployee MEmployee() {
-		System.out.println("Id del Empleado");
+		
+		System.out.println("\033[35m=====================================\u001B[0m\n||         Id del Empleado         ||");
 		f.setId(entry.next());
-		System.out.println("Primer Nombre del Empleado");
+		System.out.println("||   Primer Nombre del Empleado    ||");
 		f.setFirstName(entry.next());
-		System.out.println("Segundo Nombre del Empleado");
+		System.out.println("||   Segundo Nombre del Empleado   ||");
 		f.setSecondName(entry.next());
-		System.out.println("Primer Apellido del Empleado");
+		System.out.println("||  Primer Apellido del Empleado   ||");
 		f.setFisrtLname(entry.next());
-		System.out.println("Segundo Apellido del Empleado");
+		System.out.println("||  Segundo Apellido del Empleado  ||");
 		f.setSecondLname(entry.next());
 	
-		//boolean done = true;
-		//do {
-			
-			//try {
-				
-				System.out.println("Salario  Minimo");
-			//	 g = Double.parseDouble
+		System.out.println("||         Salario  Minimo         ||");			
 				f.setMinimumWage(entry.nextDouble());
 				
-				//done=true;
-		// }catch (Exception ex) {
-				//System.out.println("Solo numeros decimales");
-				//done=false;
-			//}
-		//}while(!done);
+				
 	Cal();
 	
 	
@@ -83,7 +73,7 @@ public class addEmployee {
 				f.setToDedud(Dedud);
 			     netSalry = numb -Dedud;
 			   f.setNetSalary(netSalry);
-		}else if(SAnual >= 500000) {
+		}else if(SAnual > 500000) {
 			 SmD = SAnual - 500000;
 			 pApli = SmD * 0.30;
 			 IA = pApli + 82000;

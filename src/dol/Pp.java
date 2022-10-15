@@ -42,13 +42,13 @@ public class Pp {
 		this.MEmp.add(f);
 	}
 	public void showData() {
-		System.out.println("===========================================");
-		System.out.println("|Listado de Empleados|");
-		System.out.println("===========================================");
-		System.out.println("|Id   |      Nombres      |y Apellidos | Horas | Tarifa | HorasExtra | Tarifa Extra | Salario Bruto | Salario Neto |");
+		System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|              Listado de Empleados               |");
+		System.out.println("\033[35m===================================================\u001B[0m");
 		for(int i=0; i<HEmp.size();i++) {
+			//System.out.println("|     ID      |\n|   Nombres   |\n|  Apellidos  |\n|    Horas    |\n|   Tarifa    |\n| Horas Extra |\n|Tarifa Extra |\n|Salario Bruto|\n|Salario Neto |");
 			HEmp.get(i).showData();
-	    System.out.println("\n===========================================");
+	    System.out.println("\n\033[35m===================================================\u001B[0m");
 	    //System.out.println();
 	    
 	    
@@ -57,13 +57,13 @@ public class Pp {
 	
 	public void showData2() {
 		
-		System.out.println("===========================================");
-		System.out.println("|Listado de Empleados|");
-		System.out.println("===========================================");
+		System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|              Listado de Empleados               |");
+		System.out.println("\033[35m===================================================\u001B[0m");
 		for(int i=0; i<MEmp.size();i++) {
 			MEmp.get(i).showData2();
 	    System.out.println();
-	    System.out.println("===========================================");
+	    System.out.println("\033[35m===================================================\u001B[0m");
 	    //System.out.println();
 	  
 	    

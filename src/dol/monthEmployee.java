@@ -39,14 +39,14 @@ public class monthEmployee extends Person {
 	}
 	
 	public void showData2 () {
-		System.out.printf("\n#%s %s %s %s %s\n ", 
+		System.out.printf("||#%s||%s %s||%s %s||\n||", 
 				getId(),
 				getFirstName(),
 				getSecondName(),
 				getFisrtLname(),
 				getSecondLname()
 				);
-		System.out.printf("\nSalario Minimo = \033[33m%s\u001B[0m \nSalario Neto = \033[32m%s \u001B[0m \nINSS = %S \nIr = %s \nDedudciones = %s " ,
+		System.out.printf("\n||Salario Minimo = \033[33m%s\u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m \n||INSS = \033[33m%s\u001B[0m \n||IR = \033[33m%s\u001B[0m \n||Deducciones = \033[32m%s \u001B[0m " ,
 				getMinimumWage(),
 				getNetSalary(),
 				getINSS(),

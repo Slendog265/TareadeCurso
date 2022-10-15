@@ -81,12 +81,21 @@ public class hourEmployee extends Person {
 
 	public void showData () {
 	
-		//System.out.println("|     |"+"      Nombres      |"+"y Apellidos | Horas | Tarifa | HorasExtra | Tarifa Extra | Salario Bruto | Salario Neto |");
-		System.out.println("----------------------------------------");
-		System.out.printf("|#"+ getId() + "|"+ getFirstName() + " "+ getSecondName() 
-		+ "|"+ getFisrtLname() + " "+ getSecondLname() +"|\033[32m"+ getHour()+"\u001B[0m|\033[32m"+ getTar()+"\u001B[0m|\033[32m"+ getXtraHours()
-		+"\u001B[0m|\033[32m"+ getXtraTar()+"\u001B[0m|\033[32m"+ getBruteWage()+"\u001B[0m|\033[32m"+ getNetSalary()+"\u001B[0m|");
-//System.out.printf("|#%s|", getId());
+		System.out.printf("||#%s||%s %s||%s %s||\n||", 
+				getId(),
+				getFirstName(),
+				getSecondName(),
+				getFisrtLname(),
+				getSecondLname()
+				);
+				System.out.printf("\n||Horas = \033[33m%s\u001B[0m \n||Tarifa = \033[33m%s \u001B[0m \n||Horas Extra = \033[32m%s\u001B[0m \n||Tarifa Extra = \033[32m%s\u001B[0m \n||Salario Minimo = \033[33m%s\u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m" ,
+				getHour(), 
+				getTar(), 
+				getXtraHours(),
+				getXtraTar(), 
+				getBruteWage(), 
+				getNetSalary() 
+				);
 		
 	}
 	

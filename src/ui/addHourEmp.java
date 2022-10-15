@@ -19,29 +19,29 @@ public class addHourEmp {
 		
 		
 		Short op;
-		System.out.println("ID del Empleado");
+		System.out.println("\033[35m=====================================\u001B[0m\n||         Id del Empleado         ||");
 		m.setId(entry.next());
-		System.out.println("Primer Nombre del Empleado");
+		System.out.println("||   Primer Nombre del Empleado    ||");
 		m.setFirstName(entry.next());
-		System.out.println("Segundo Nombre del Empleado");
+		System.out.println("||   Segundo Nombre del Empleado   ||");
 		m.setSecondName(entry.next());
-		System.out.println("Primer Apellido del Empleado");
+		System.out.println("||  Primer Apellido del Empleado   ||");
 		m.setFisrtLname(entry.next());
-		System.out.println("Segundo Apellido del Empleado");
+		System.out.println("||  Segundo Apellido del Empleado  ||");
 		m.setSecondLname(entry.next());
-	   System.out.println("Horas de Trabajo del Empleado");
-	   m.setHour(entry.nextInt());
-	   System.out.println("Tarifa del Empelado por Hora");
+	    System.out.println("||  Horas de Trabajo del Empleado  ||");
+	    m.setHour(entry.nextInt());
+	    System.out.println("||   Tarifa del Empelado por Hora  ||");
 		m.setTar(entry.nextInt());
-		System.out.println("El empleado Trabaja Horas Extras?");
-		System.out.println("1.Si");
-		System.out.println("2.No");
+		System.out.println("||El empleado Trabaja Horas Extras?||");
+		System.out.println("||\033[36m1.\u001B[0mSi, si trabaja horas extra     ||");
+		System.out.println("||\033[36m2.\u001B[0mNo, no trabaja horas extra     ||");
 		op = entry.nextShort();		
 		switch (op) {
 		case 1:
-			System.out.println("Horas Extras del Empleado");
+			System.out.println("||    Horas Extras del Empleado    ||");
 			m.setXtraHours(entry.nextInt());
-			System.out.println("Tarifa Extra del Empleado");
+			System.out.println("||    Tarifa Extra del Empleado    ||");
 			m.setXtraTar(entry.nextInt());
 			Cal3();
 			return m;
@@ -52,7 +52,7 @@ public class addHourEmp {
 			
 			return m;
 		default:
-				System.out.println("Eleccion equivocada");
+				System.out.println("\"\\033[35m===================================================\\u001B[0m\\033[31m\\n|Hemos encontrado un error en los datos ingresados|\\n|Por favor introduzca los datos solicitados.     |\\033[35m \\n===================================================\\u001B[0m\"");
 				break;
 		}
 		return m;
