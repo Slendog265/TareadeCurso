@@ -46,12 +46,12 @@ public class monthEmployee extends Person {
 				getFisrtLname(),
 				getSecondLname()
 				);
-		System.out.printf("\n||Salario Minimo = \033[33m%s\u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m \n||INSS = \033[33m%s\u001B[0m \n||IR = \033[33m%s\u001B[0m \n||Deducciones = \033[32m%s \u001B[0m " ,
+		System.out.printf("\n||Salario Minimo = \033[33m%s\u001B[0m  \n||INSS = \033[33m%s\u001B[0m \n||IR = \033[33m%s\u001B[0m \n||Deducciones = \033[32m%s \u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m " ,
 				getMinimumWage(),
-				getNetSalary(),
 				getINSS(),
 				getIr(),
-				getToDedud()
+				getToDedud(),
+				getNetSalary()
 				);
 	}
 

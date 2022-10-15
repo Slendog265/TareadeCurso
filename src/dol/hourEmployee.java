@@ -88,13 +88,16 @@ public class hourEmployee extends Person {
 				getFisrtLname(),
 				getSecondLname()
 				);
-				System.out.printf("\n||Horas = \033[33m%s\u001B[0m \n||Tarifa = \033[33m%s \u001B[0m \n||Horas Extra = \033[32m%s\u001B[0m \n||Tarifa Extra = \033[32m%s\u001B[0m \n||Salario Minimo = \033[33m%s\u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m" ,
+				System.out.printf("\n||Horas = \033[33m%s\u001B[0m \n||Tarifa = \033[33m%s \u001B[0m \n||Horas Extra = \033[32m%s\u001B[0m \n||Tarifa Extra = \033[32m%s\u001B[0m \n||Salario Minimo = \033[33m%s\u001B[0m \n||INSS = \033[33m%s\u001B[0m \n||IR = \033[33m%s\u001B[0m \n||Total Deducciones = \033[33m%s\u001B[0m \n||Salario Neto = \033[32m%s \u001B[0m" ,
 				getHour(), 
 				getTar(), 
 				getXtraHours(),
 				getXtraTar(), 
 				getBruteWage(), 
-				getNetSalary() 
+				getINSS(),
+				getIr(),
+				getToDedud(),
+				getNetSalary()
 				);
 		
 	}
