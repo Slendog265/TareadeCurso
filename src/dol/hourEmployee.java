@@ -2,7 +2,7 @@ package dol;
 
 public class hourEmployee extends Person {
 	
-	private int Hour;
+	private Integer Hour;
 	private Integer xtraHours;
 	private Integer Tar;
 	private Integer xtraTar;
@@ -15,18 +15,17 @@ public class hourEmployee extends Person {
 		
 	}
 
-	public hourEmployee(String firstName, String secondName, String fisrtLname, String secondLname, String id, int hour,
-			Integer xtraHours, Integer tar, Integer xtraTar, Integer bruteWage, Double netSalary) {
-		super(firstName, secondName, fisrtLname, secondLname, id);
+
+	public hourEmployee(String firstName, String secondName, String fisrtLname, String secondLname, String id,
+			Double iNSS, Double ir, Double toDedud, Integer hour, Integer xtraHours, Integer tar, Integer xtraTar,
+			Integer bruteWage, Double netSalary) {
+		super(firstName, secondName, fisrtLname, secondLname, id, iNSS, ir, toDedud);
 		Hour = hour;
 		this.xtraHours = xtraHours;
 		Tar = tar;
 		this.xtraTar = xtraTar;
 		BruteWage = bruteWage;
-		this.BruteWage = bruteWage;
 		NetSalary = netSalary;
-		this.NetSalary = netSalary; 
-		
 	}
 
 	public int getHour() {

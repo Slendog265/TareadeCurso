@@ -5,16 +5,20 @@ public class monthEmployee extends Person {
 	private Double minimumWage;
 	private Double netSalary;
 	
+	
 	public monthEmployee ( ) {
 	
 	}
 
-	public monthEmployee(String firstName, String secondName, String fisrtLname, String secondLname,
-			String eemployeNumb, Double minimumWage, Double netSalary, String Id) {
-		super(firstName, secondName, fisrtLname, secondLname, Id);
+	
+
+	public monthEmployee(String firstName, String secondName, String fisrtLname, String secondLname, String id,
+			Double iNSS, Double ir, Double toDedud, Double minimumWage, Double netSalary) {
+		super(firstName, secondName, fisrtLname, secondLname, id, iNSS, ir, toDedud);
 		this.minimumWage = minimumWage;
 		this.netSalary = netSalary;
 	}
+
 
 
 	public Double getMinimumWage() {
@@ -42,9 +46,12 @@ public class monthEmployee extends Person {
 				getFisrtLname(),
 				getSecondLname()
 				);
-		System.out.printf("\nSalario Minimo = \033[33m%s\u001B[0m \nSalario Neto = \033[32m%s \u001B[0m " ,
+		System.out.printf("\nSalario Minimo = \033[33m%s\u001B[0m \nSalario Neto = \033[32m%s \u001B[0m \nINSS = %S \nIr = %s \nDedudciones = %s " ,
 				getMinimumWage(),
-				getNetSalary()
+				getNetSalary(),
+				getINSS(),
+				getIr(),
+				getToDedud()
 				);
 	}
 

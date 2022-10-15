@@ -7,18 +7,25 @@ public class Person {
 	private String fisrtLname;
 	private String secondLname;
 	private String Id;
+	private Double INSS;
+	private Double Ir;
+	private Double ToDedud;
 
 	public Person() {
 		super();
 	}
 
-	public Person(String firstName, String secondName, String fisrtLname, String secondLname, String id) {
+	public Person(String firstName, String secondName, String fisrtLname, String secondLname, String id, Double iNSS, Double ir, Double toDedud) {
 		super();
 		this.firstName = firstName;
 		this.secondName = secondName;
 		this.fisrtLname = fisrtLname;
 		this.secondLname = secondLname;
 		this.Id = id;
+		this.INSS = iNSS;
+		this.Ir = ir;
+		this.ToDedud = toDedud;
+		
 	}
 
 	public String getFirstName() {
@@ -59,6 +66,30 @@ public class Person {
 
 	public void setId(String id) {
 		Id = id;
+	}
+
+	public Double getINSS() {
+		return INSS;
+	}
+
+	public void setINSS(Double iNSS) {
+		INSS = iNSS;
+	}
+
+	public Double getIr() {
+		return Ir;
+	}
+
+	public void setIr(Double ir) {
+		Ir = ir;
+	}
+
+	public Double getToDedud() {
+		return ToDedud;
+	}
+
+	public void setToDedud(Double toDedud) {
+		ToDedud = toDedud;
 	}
 
 }
