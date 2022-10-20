@@ -3,14 +3,14 @@ package ui;
 import java.util.Scanner;
 
 import dol.monthEmployee;
+import misc.dedudCalc;
 
 public class addEmployee {
 	
 
 	monthEmployee f = new monthEmployee();
+	dedudCalc e = new dedudCalc();
 	Scanner entry = new Scanner(System.in);
-	private double g;
-	//private boolean done = false;
 	public monthEmployee MEmployee() {
 		
 		System.out.println("\033[35m=====================================\u001B[0m\n||         Id del Empleado         ||");
@@ -28,71 +28,12 @@ public class addEmployee {
 				f.setMinimumWage(entry.nextDouble());
 				
 				
-	Cal();
+	e.dedudCalc0();
 	
 	
 		return f;
 	}
 	
-	public monthEmployee Cal () {
-		
-		double numb = f.getMinimumWage();
-		double SmD = 0, IrM = 0, pApli = 0,Dedud = 0, netSalry = 0, IA = 0;
-		double INSS = numb * 0.07;
-		
-		f.setINSS(INSS);
-		double BImpo = numb - INSS;
-		double SAnual = BImpo * 12;
-		if(SAnual <  199999  ) {
-			 SmD = SAnual - 100000;
-			 pApli = SmD * 0.15;
-			 IrM = pApli/12;
-			f.setIr(IrM);
-			  Dedud = INSS +IrM;
-				f.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-	f.setNetSalary(netSalry);
-		}else if(SAnual < 349999 ) {
-			 SmD = SAnual - 200000;
-			 pApli = SmD * 0.20;
-			
-			 IA = pApli + 15000;
-			 IrM = IA /12 ;
-			 f.setIr(IrM);
-			  Dedud = INSS + IrM;
-				f.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    f.setNetSalary(netSalry);
-		}else if(SAnual  < 499999 ) {
-			 SmD = SAnual - 350000;
-			 pApli = SmD * 0.25;
-			 IA = pApli + 45000;
-			 IrM = IA /12 ;
-			 f.setIr(IrM);
-			  Dedud = INSS + IrM;
-				f.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			   f.setNetSalary(netSalry);
-		}else if(SAnual > 500000) {
-			 SmD = SAnual - 500000;
-			 pApli = SmD * 0.30;
-			 IA = pApli + 82000;
-			 IrM = IA /12 ;
-			 f.setIr(IrM);
-			  Dedud = INSS  + IrM;
-				f.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    f.setNetSalary(netSalry);
-
-		}
-		
-		
-		return f;
-	    
-		
-		
-		
-	}
 		
 	
 	

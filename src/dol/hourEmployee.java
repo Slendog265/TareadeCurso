@@ -79,6 +79,8 @@ public class hourEmployee extends Person {
 		NetSalary = netSalary;
 	}
 
+	
+	
 	public void showData () {
 	
 		System.out.printf("||#%s||%s %s||%s %s||\n||", 

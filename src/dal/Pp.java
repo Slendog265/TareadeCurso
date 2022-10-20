@@ -1,8 +1,10 @@
-package dol;
+package dal;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import dol.hourEmployee;
+import dol.monthEmployee;
 import ui.Menu;
 import ui.MenuMEmp;
 
@@ -10,7 +12,7 @@ public class Pp {
 
 	private List<hourEmployee> HEmp;
 	private List<monthEmployee> MEmp;
-	Menu q = new Menu();
+	//Menu q = new Menu();
 	MenuMEmp w = new MenuMEmp();
 	
 	public Pp() {

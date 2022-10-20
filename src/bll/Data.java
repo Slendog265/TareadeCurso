@@ -1,6 +1,6 @@
 package bll;
 
-import dol.Pp;
+import dal.Pp;
 import dol.hourEmployee;
 import dol.monthEmployee;
 import ui.addEmployee;
@@ -14,8 +14,8 @@ public final class Data {
 		G.addHoEmp(m);
 	} 
 	public static void catchHEmployee() {
-		addHourEmp em = new addHourEmp();
-		addHoEmp(em.HEmployee());
+		//addHourEmp em = new addHourEmp();
+		//addHoEmp(em.HEmployee());
 	}
 	
 	public static void addMoEmp(monthEmployee f) {

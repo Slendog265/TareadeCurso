@@ -1,21 +1,30 @@
 package ui;
 
+import java.util.List;
 import java.util.Scanner;
 
 import dol.hourEmployee;
 import main.Main;
+import misc.dedudCalc;
 
 public class addHourEmp {
-	private Scanner entry = new Scanner(System.in);
-	Main q = new Main ();
-	Menu a = new Menu ();
+	private Scanner entry;
+	private List<hourEmployee> hEmp;
 	
-	public addHourEmp() {
-		
+	
+	public addHourEmp(Scanner entry) {
+		super();
+		this.entry = entry;
+	}
+	
+	public addHourEmp(List<hourEmployee> hEmp) {
+		super();
+		this.hEmp = hEmp;
 	}
 	hourEmployee m = new hourEmployee();
+	dedudCalc e = new dedudCalc();
 	
-	public hourEmployee HEmployee() {
+	public hourEmployee hEmployee() {
 		
 		
 		Short op;
@@ -43,10 +52,10 @@ public class addHourEmp {
 			m.setXtraHours(entry.nextInt());
 			System.out.println("||    Tarifa Extra del Empleado    ||");
 			m.setXtraTar(entry.nextInt());
-			Cal3();
+			e.calcDedud1();
 			return m;
 		case 2:
-			Cal2();
+			e.calcDedud2();
 			m.setXtraHours(0);
 			m.setXtraTar(0);
 			
@@ -58,122 +67,20 @@ public class addHourEmp {
 		return m;
 	}
 	
-	public hourEmployee Cal2() {
-		Integer Tarifa = m.getTar();
-		Integer Horas = m.getHour();
-		Integer Total1 = Horas * Tarifa;
-		m.setBruteWage(Total1);	
-		double numb = Total1;
-		double SmD = 0, IrM = 0, pApli = 0,Dedud = 0, netSalry = 0, IA = 0;
-		double INSS = numb * 0.07;
-		m.setINSS(INSS);
-		double BImpo = numb - INSS;
-		double SAnual = BImpo * 12;
-		if(SAnual <  199999  ) {
-			 SmD = SAnual - 100000;
-			 pApli = SmD * 0.15;
-			 IrM = pApli/12;
-			m.setIr(IrM);
-			  Dedud = INSS +IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-	m.setNetSalary(netSalry);
-		}else if(SAnual < 349999 ) {
-			 SmD = SAnual - 200000;
-			 pApli = SmD * 0.20;
-			
-			 IA = pApli + 15000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    m.setNetSalary(netSalry);
-		}else if(SAnual  < 499999 ) {
-			 SmD = SAnual - 350000;
-			 pApli = SmD * 0.25;
-			 IA = pApli + 45000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			   m.setNetSalary(netSalry);
-		}else if(SAnual > 500000) {
-			 SmD = SAnual - 500000;
-			 pApli = SmD * 0.30;
-			 IA = pApli + 82000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS  + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    m.setNetSalary(netSalry);
-
+	public void show() {
+		System.out.println("\033[35m===================================================\u001B[0m");
+		System.out.println("|              Listado de Empleados               |");
+		System.out.println("\033[35m===================================================\u001B[0m");
+		for(int i=0; i<hEmp.size();i++) {
+			hEmp.get(i).showData();
+	    System.out.println("\n\033[35m===================================================\u001B[0m");
+	   
+	    
+	    
 		}
-		return m;		
-		
 	}
 	
 	
-	public hourEmployee Cal3() {
-		Integer Tarifa = m.getTar();
-		Integer Horas = m.getHour();
-		Integer Total1 = Horas * Tarifa;
-		Integer Xtarifa = m.getXtraTar();
-		Integer XHora = m.getXtraHours();
-		Integer Total2 = XHora * Xtarifa;
-		Integer Brute = Total1 + Total2;
-		m.setBruteWage(Brute);
-		double numb = Total1;
-		double SmD = 0, IrM = 0, pApli = 0,Dedud = 0, netSalry = 0, IA = 0;
-		double INSS = numb * 0.07;
-		m.setINSS(INSS);
-		double BImpo = numb - INSS;
-		double SAnual = BImpo * 12;
-		if(SAnual <  199999  ) {
-			 SmD = SAnual - 100000;
-			 pApli = SmD * 0.15;
-			 IrM = pApli/12;
-			m.setIr(IrM);
-			  Dedud = INSS +IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-	m.setNetSalary(netSalry);
-		}else if(SAnual < 349999 ) {
-			 SmD = SAnual - 200000;
-			 pApli = SmD * 0.20;
-			
-			 IA = pApli + 15000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    m.setNetSalary(netSalry);
-		}else if(SAnual  < 499999 ) {
-			 SmD = SAnual - 350000;
-			 pApli = SmD * 0.25;
-			 IA = pApli + 45000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			   m.setNetSalary(netSalry);
-		}else if(SAnual > 500000) {
-			 SmD = SAnual - 500000;
-			 pApli = SmD * 0.30;
-			 IA = pApli + 82000;
-			 IrM = IA /12 ;
-			 m.setIr(IrM);
-			  Dedud = INSS  + IrM;
-				m.setToDedud(Dedud);
-			     netSalry = numb -Dedud;
-			    m.setNetSalary(netSalry);
-		}
-		return m;
-		
-	}
+	
 	
 }
