@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import bll.Data;
 import bll.PMenu;
+import dal.Pp;
 import dal.employeesDal;
 import dol.hourEmployee;
 
@@ -13,13 +15,16 @@ public class Menu {
 	private List<hourEmployee> hEmp;
 	
 	
-	
+	public Menu(List<hourEmployee> hEmp) {
+		hEmp = new ArrayList<hourEmployee>();
+	}
 	
 	
 	public Menu(Scanner scan, List<hourEmployee> hEmp) {
 		super();
 		entry = new Scanner(System.in);
 		hEmp = new ArrayList<hourEmployee>();
+		
 	}
 	public void ShowOp() {
 	    System.out.println("\033[35m===================================================\u001B[0m");
@@ -60,28 +65,35 @@ public class Menu {
 	}
 	
 	private void add() {
-		addHourEmp em = new addHourEmp(entry);
-		hEmp.add(em.hEmployee());
+		Data.catchHEmployee();
+		Data.catchHEmp();
+		//addHourEmp em = new addHourEmp(entry);
+		//addHoEmp(em.hEmployee());
+		//addHoEmp(em.xtraHEmp());
 	}
-	
-	private void save() {
+	private void addHoEmp(hourEmployee m) {
 		employeesDal ed = new employeesDal();
-		
-		System.out.println("Por favor indica el nombre del archivo: ");	
-		ed.setFilePath(entry.next());
+		ed.addHoEmp(m);
+	}
+	private void save() {
+		//employeesDal ed = new employeesDal();
+		Pp p = new Pp();
+		System.out.println("Por favor indica la ruta del archivo: ");	
+		p.setFilePath(entry.next());
 		System.out.println("Por favor indica el nombre del archivo: ");		
-		ed.setFileName(entry.next());
-		ed.setHEmp(hEmp);
-		ed.saveList();
+		p.setFileName(entry.next());
+		p.setHEmp(hEmp);
+		p.saveList();
 	}
 	
 	public void open() {
 		System.out.println("Por favor indique la ruta del archivo para abrir ");
 		String filepath = entry.next();
-		employeesDal ed = new employeesDal();
-		ed.setFilePath(filepath);
-		hEmp = ed.openList();
-		addHourEmp em = new addHourEmp(hEmp);
-		em.show();
+		//employeesDal ed = new employeesDal();
+		Pp p = new Pp();
+		p.setFilePath(filepath);
+		hEmp = p.openList();
+		//addHourEmp em = new addHourEmp(hEmp);
+		p.showData();
 	}
 }

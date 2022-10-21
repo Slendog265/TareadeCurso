@@ -44,7 +44,9 @@ public class employeesDal {
 		public void setFileName(String fileName) {
 			this.fileName = fileName;
 		}
-		
+		public void addHoEmp (hourEmployee m) {
+			this.hEmp.add(m);
+		}
 		
 		public void saveList() {
 			

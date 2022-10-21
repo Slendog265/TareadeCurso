@@ -8,11 +8,11 @@ import main.Main;
 import misc.dedudCalc;
 
 public class addHourEmp {
-	private Scanner entry;
-	private List<hourEmployee> hEmp;
+	//private Scanner entry;
+	//private List<hourEmployee> hEmp;
 	
 	
-	public addHourEmp(Scanner entry) {
+	/**public addHourEmp(Scanner entry) {
 		super();
 		this.entry = entry;
 	}
@@ -20,7 +20,8 @@ public class addHourEmp {
 	public addHourEmp(List<hourEmployee> hEmp) {
 		super();
 		this.hEmp = hEmp;
-	}
+	}**/
+	Scanner entry = new Scanner(System.in);
 	hourEmployee m = new hourEmployee();
 	dedudCalc e = new dedudCalc();
 	
@@ -52,10 +53,10 @@ public class addHourEmp {
 			m.setXtraHours(entry.nextInt());
 			System.out.println("||    Tarifa Extra del Empleado    ||");
 			m.setXtraTar(entry.nextInt());
-			e.calcDedud1();
+			//e.calcDedud1();
 			return m;
 		case 2:
-			e.calcDedud2();
+			//e.calcDedud2();
 			m.setXtraHours(0);
 			m.setXtraTar(0);
 			
@@ -67,7 +68,14 @@ public class addHourEmp {
 		return m;
 	}
 	
-	public void show() {
+	public hourEmployee xtraHEmp() {
+		e.calcDedud2();
+		return m;
+		
+	}
+	
+	
+	/**public void show() {
 		System.out.println("\033[35m===================================================\u001B[0m");
 		System.out.println("|              Listado de Empleados               |");
 		System.out.println("\033[35m===================================================\u001B[0m");
@@ -78,7 +86,7 @@ public class addHourEmp {
 	    
 	    
 		}
-	}
+	}**/
 	
 	
 	

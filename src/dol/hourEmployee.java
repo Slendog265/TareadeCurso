@@ -28,13 +28,17 @@ public class hourEmployee extends Person {
 		NetSalary = netSalary;
 	}
 
-	public int getHour() {
+	
+
+	public Integer getHour() {
 		return Hour;
 	}
 
-	public void setHour(int i) {
-		Hour = i;
+
+	public void setHour(Integer hour) {
+		Hour = hour;
 	}
+
 
 	public Integer getXtraHours() {
 		return xtraHours;
